@@ -1,0 +1,44 @@
+.page-header h1 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 3rem 0 1rem;
+}
+.page-header .subtitle, .cv-intro { color: var(--text-muted); max-width: 60ch; margin-bottom: 4rem; }
+.cv-intro { margin-bottom: 2rem; }
+.cv-section { margin-bottom: 4rem; }
+.cv-section h2 {
+  font-size: 1.5rem; font-weight: 600; padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border); margin-bottom: 2.5rem;
+}
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 170px 24px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+.entry-date { font-size: 0.9rem; color: var(--text-muted); text-align: right; padding-top: 0.15rem; white-space: nowrap; }
+.entry-location { display: block; margin-top: 0.25rem; color: var(--text); }
+.entry-rail { position: relative; height: 100%; }
+.entry-rail::before {
+  content: ""; position: absolute; left: 50%; top: 0.5rem; bottom: -2.5rem;
+  width: 2px; background: var(--border); transform: translateX(-50%);
+}
+.timeline-entry:last-child .entry-rail::before { bottom: auto; height: calc(100% - 0.5rem); }
+.entry-dot {
+  position: absolute; left: 50%; top: 0.35rem; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+  transform: translateX(-50%);
+}
+.entry-content h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.25rem; }
+.entry-org { color: var(--accent); font-size: 0.95rem; font-weight: 500; text-decoration: none; display: block; margin-bottom: 0.75rem; }
+.entry-org:hover { text-decoration: underline; } .entry-content p { color: var(--text-muted); font-size: 0.95rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+@media (max-width: 720px) {
+  .page-header .subtitle, .cv-intro, .entry-content { min-width: 0; max-width: 32ch; overflow-wrap: anywhere; }
+  .timeline-entry { grid-template-columns: 16px minmax(0, 1fr); gap: 0 1rem; }
+  .entry-date { grid-column: 2; text-align: left; padding-top: 0; margin-bottom: 0.25rem; order: -1; }
+  .entry-content { grid-column: 2; }
+}

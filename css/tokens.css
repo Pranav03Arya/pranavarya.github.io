@@ -1,0 +1,23 @@
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #f5f6f8;
+  --bg-elevated: #ffffff;
+  --text: #0f1419;
+  --text-muted: #5a6572;
+  --border: #e3e5e8;
+  --accent: #1e5fb0;
+  --accent-hover: #174a8c;
+  --accent-soft: #e8eef7;
+}
+
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --bg-subtle: #161b22;
+  --bg-elevated: #161b22;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --border: #30363d;
+  --accent: #4493f8;
+  --accent-hover: #58a6ff;
+  --accent-soft: #1a2c44;
+}

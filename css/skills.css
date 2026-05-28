@@ -1,0 +1,28 @@
+.skills-section {
+  display: block;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+}
+
+.skill-category h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.5rem 0;
+}
+
+.skill-list {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .skills-section { grid-template-columns: 1fr; gap: 1.5rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}

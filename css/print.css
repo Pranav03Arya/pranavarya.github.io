@@ -1,0 +1,32 @@
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link,
+  #theme-toggle,
+  .cta-row,
+  .download-pdf,
+  [data-print-hidden] {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .entry-rail,
+  .entry-dot {
+    display: none !important;
+  }
+  .timeline-entry {
+    grid-template-columns: 120px 1fr !important;
+    gap: 1rem !important;
+    padding-bottom: 1.25rem;
+  }
+  .entry-date {
+    color: black;
+    text-align: left;
+  }
+  .entry-content p,
+  .page-header .subtitle {
+    color: black;
+  }
+}
